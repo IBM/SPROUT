@@ -7,7 +7,6 @@ lr=0.01
 #data=imagenet-sub
 data=cifar10   
 #data=mnist
-#data=stl10
 #root=/nvme0
 root=data
 #model=wide_resnet
@@ -16,7 +15,6 @@ root=data
 model=vgg
 mixalpha=0.2
 augsigma=0.1
-#model=small_cnn
 model_out=./checkpoint/${data}_${model}_sep_together3
 echo "model_out: " ${model_out}
 CUDA_VISIBLE_DEVICES=0 python ./main_cus.py \
